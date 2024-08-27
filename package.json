@@ -1,0 +1,24 @@
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "This is to understand bundling",
+  "scripts": 
+  {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Apoorva Joshi",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
