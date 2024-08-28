@@ -20,11 +20,34 @@ import ReactDOM from "react-dom/client"
  ]
  )
 
+ //This is React Element and it always returns java script object
  const heading = React.createElement(
     "h1",
     {id : "heading"},
     "This is heading"
  )
 
+ //JSX Heading
+ const jsxHeading = <h1 id="heading">This is JSX Heading</h1>
+
+ //Title Component
+ const TitleComponent = () => <h1>Hello This is Title Component</h1>
+ 
+
+ //React Functional Component
+ //With curly braces in jsx we can write javascript
+ //JSX will sanitize the api bad data hence prevents cross scripiting attacks
+ //At EOD Component is just a function and hence can be called as {TitleComponent()}
+ const HeadingComponent = () => (
+    <div id="Heading">
+        <h3>Component Composition inserting title component below</h3>
+        <TitleComponent />
+        {heading}
+        {100 + 200}
+        {TitleComponent()}
+        <h2> This is Functional Component</h2>
+    </div>
+ )
+
  const root = ReactDOM.createRoot(document.getElementById("root"))
- root.render(parent);
+ root.render(<HeadingComponent/>);
